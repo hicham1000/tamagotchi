@@ -43,12 +43,6 @@ function getmusic() {
     const music = new Array(nbmusic).fill("♫♩♬ ◙▒◙ ").join("")
     return music
 }
-   
-if(key.name === 'm') {
-    startnewlife();
-    
-    return startnewlife();
-}
 
 function getLifeBar() {
     const nbcoeur = Math.floor((30*state.life)/100)
@@ -97,5 +91,10 @@ setInterval(function() {
   
 },100)
 process.stdin.on('keypress', (character, key) => {
- 
+    
+    if(key.name === 'm') {
+        startnewlife();
+        
+        return startnewlife();
+    }
 })
